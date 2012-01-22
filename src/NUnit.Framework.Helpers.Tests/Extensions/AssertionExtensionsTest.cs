@@ -171,6 +171,16 @@ namespace NUnit.Framework.Helpers.Tests.Extensions
 
             beer.ShouldBeAssignableFrom<Drink>();
             beer.ShouldBeAssignableFrom<IDrink>();
+
+            "foo".ShouldBeAssignableFrom<object>();
+        }
+
+        [Test]
+        public void ShouldBeAssignableFrom_IsNotAssignableFrom_ShouldThrowAssertionException()
+        {
+            Beer beer = new Beer();
+
+            Assert.Throws<AssertionException>(beer.ShouldBeAssignableFrom<string>);
         }
     }
 
