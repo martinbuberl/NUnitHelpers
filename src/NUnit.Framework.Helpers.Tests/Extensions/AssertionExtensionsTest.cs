@@ -147,9 +147,46 @@ namespace NUnit.Framework.Helpers.Tests.Extensions
         }
 
         [Test]
-        public void ShouldBeFalse_IsTrue_ThrowAssertionException()
+        public void ShouldBeFalse_IsTrue_ShouldThrowAssertionException()
         {
             Assert.Throws<AssertionException>(() => true.ShouldBeFalse());
         }
+
+        [Test]
+        public void ShouldBeT_IsT_ShouldPass()
+        {
+            "foo".ShouldBe<string>();
+        }
+
+        [Test]
+        public void ShouldBeT_IsNotT_ShouldThrowAssertionException()
+        {
+            Assert.Throws<AssertionException>(() => "foo".ShouldBe<int>());
+        }
+
+        [Test]
+        public void ShouldBeAssignableFrom_IsAssignableFrom_ShouldPass()
+        {
+            Beer beer = new Beer();
+
+            beer.ShouldBeAssignableFrom<Drink>();
+            beer.ShouldBeAssignableFrom<IDrink>();
+        }
     }
+
+    #region Helpers
+
+    internal class Drink : IDrink
+    {
+    }
+
+    internal class Beer : Drink
+    {
+    }
+
+    internal interface IDrink
+    {
+    }
+
+    #endregion
 }

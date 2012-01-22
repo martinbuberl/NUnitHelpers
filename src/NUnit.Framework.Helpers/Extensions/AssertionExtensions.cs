@@ -55,5 +55,16 @@ namespace NUnit.Framework.Helpers.Extensions
         {
             Assert.IsFalse(actual);
         }
+
+        public static void ShouldBe<TExpected>(this object actual)
+        {
+            Assert.IsInstanceOf<TExpected>(actual);
+        }
+
+        public static void ShouldBeAssignableFrom<TExpected>(this object actual)
+        {
+            // Assert.IsAssignableFrom is not implemented properly, see https://bugs.launchpad.net/nunitv2/+bug/809679
+            Assert.That(actual is TExpected);
+        }
     }
 }
