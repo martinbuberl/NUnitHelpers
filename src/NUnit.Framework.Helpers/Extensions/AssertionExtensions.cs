@@ -25,5 +25,25 @@ namespace NUnit.Framework.Helpers.Extensions
         {
             Assert.IsNotNullOrEmpty(actual);
         }
+
+        public static void ShouldBeEqual(this object actual, object expected)
+        {
+            Assert.AreEqual(expected, actual);
+        }
+
+        public static void ShouldNotBeEqual(this object actual, object expected)
+        {
+            Assert.AreNotEqual(expected, actual);
+        }
+
+        public static void ShouldBeSame(this object actual, object expected)
+        {
+            Assert.AreSame(expected, actual);
+        }
+
+        public static void ShouldNotBeSame(this object actual, object expected)
+        {
+            Assert.AreNotSame(expected, actual);
+        }
     }
 }

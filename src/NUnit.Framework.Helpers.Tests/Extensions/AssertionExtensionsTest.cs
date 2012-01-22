@@ -55,5 +55,77 @@ namespace NUnit.Framework.Helpers.Tests.Extensions
             Assert.Throws<AssertionException>(() => ((string)null).ShouldNotBeNullOrEmpty());
             Assert.Throws<AssertionException>(() => String.Empty.ShouldNotBeNullOrEmpty());
         }
+
+        [Test]
+        public void ShouldBeEqual_IsEqual_ShouldPass()
+        {
+            string foo1 = new string(new[] { 'f', 'o', 'o' });
+            string foo2 = new string(new[] { 'f', 'o', 'o' });
+
+            foo1.ShouldBeEqual(foo2);
+        }
+
+        [Test]
+        public void ShouldBeEqual_IsNotEqual_ShouldThrowAssertionException()
+        {
+            string foo = new string(new[] { 'f', 'o', 'o' });
+            string bar = new string(new[] { 'b', 'a', 'r' });
+
+            Assert.Throws<AssertionException>(() => foo.ShouldBeEqual(bar));
+        }
+
+        [Test]
+        public void ShouldNotBeEqual_IsNotEqual_ShouldPass()
+        {
+            string foo = new string(new[] { 'f', 'o', 'o' });
+            string bar = new string(new[] { 'b', 'a', 'r' });
+
+            foo.ShouldNotBeEqual(bar);
+        }
+
+        [Test]
+        public void ShouldNotBeEqual_IsEqual_ShouldThrowAssertionException()
+        {
+            string foo1 = new string(new[] { 'f', 'o', 'o' });
+            string foo2 = new string(new[] { 'f', 'o', 'o' });
+
+            Assert.Throws<AssertionException>(() => foo1.ShouldNotBeEqual(foo2));
+        }
+
+        [Test]
+        public void ShouldBeSame_IsSame_ShouldPass()
+        {
+            string foo1 = new string(new[] { 'f', 'o', 'o' });
+            string foo2 = foo1;
+
+            foo1.ShouldBeSame(foo2);
+        }
+
+        [Test]
+        public void ShouldBeSame_IsNotSame_ShouldThrowAssertionException()
+        {
+            string foo1 = new string(new[] { 'f', 'o', 'o' });
+            string foo2 = new string(new[] { 'f', 'o', 'o' });
+
+            Assert.Throws<AssertionException>(() => foo1.ShouldBeSame(foo2));
+        }
+
+        [Test]
+        public void ShouldNotBeSame_IsNotSame_ShouldPass()
+        {
+            string foo1 = new string(new[] { 'f', 'o', 'o' });
+            string foo2 = new string(new[] { 'f', 'o', 'o' });
+
+            foo1.ShouldNotBeSame(foo2);
+        }
+
+        [Test]
+        public void ShouldNotBeSame_IsSame_ShouldThrowAssertionException()
+        {
+            string foo1 = new string(new[] { 'f', 'o', 'o' });
+            string foo2 = foo1;
+
+            Assert.Throws<AssertionException>(() => foo1.ShouldNotBeSame(foo2));
+        }
     }
 }
