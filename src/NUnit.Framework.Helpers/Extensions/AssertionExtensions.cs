@@ -45,5 +45,15 @@ namespace NUnit.Framework.Helpers.Extensions
         {
             Assert.AreNotSame(expected, actual);
         }
+
+        public static void ShouldBeTrue(this bool actual)
+        {
+            Assert.IsTrue(actual);
+        }
+
+        public static void ShouldBeFalse(this bool actual)
+        {
+            Assert.IsFalse(actual);
+        }
     }
 }

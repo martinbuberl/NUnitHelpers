@@ -52,15 +52,15 @@ namespace NUnit.Framework.Helpers.Tests.Extensions
         [Test]
         public void ShouldNotBeNullOrEmpty_IsNullOrEmpty_ShouldThrowAssertionException()
         {
-            Assert.Throws<AssertionException>(() => ((string)null).ShouldNotBeNullOrEmpty());
+            Assert.Throws<AssertionException>(() => ((string) null).ShouldNotBeNullOrEmpty());
             Assert.Throws<AssertionException>(() => String.Empty.ShouldNotBeNullOrEmpty());
         }
 
         [Test]
         public void ShouldBeEqual_IsEqual_ShouldPass()
         {
-            string foo1 = new string(new[] { 'f', 'o', 'o' });
-            string foo2 = new string(new[] { 'f', 'o', 'o' });
+            string foo1 = new string(new[] {'f', 'o', 'o'});
+            string foo2 = new string(new[] {'f', 'o', 'o'});
 
             foo1.ShouldBeEqual(foo2);
         }
@@ -68,8 +68,8 @@ namespace NUnit.Framework.Helpers.Tests.Extensions
         [Test]
         public void ShouldBeEqual_IsNotEqual_ShouldThrowAssertionException()
         {
-            string foo = new string(new[] { 'f', 'o', 'o' });
-            string bar = new string(new[] { 'b', 'a', 'r' });
+            string foo = new string(new[] {'f', 'o', 'o'});
+            string bar = new string(new[] {'b', 'a', 'r'});
 
             Assert.Throws<AssertionException>(() => foo.ShouldBeEqual(bar));
         }
@@ -77,8 +77,8 @@ namespace NUnit.Framework.Helpers.Tests.Extensions
         [Test]
         public void ShouldNotBeEqual_IsNotEqual_ShouldPass()
         {
-            string foo = new string(new[] { 'f', 'o', 'o' });
-            string bar = new string(new[] { 'b', 'a', 'r' });
+            string foo = new string(new[] {'f', 'o', 'o'});
+            string bar = new string(new[] {'b', 'a', 'r'});
 
             foo.ShouldNotBeEqual(bar);
         }
@@ -86,8 +86,8 @@ namespace NUnit.Framework.Helpers.Tests.Extensions
         [Test]
         public void ShouldNotBeEqual_IsEqual_ShouldThrowAssertionException()
         {
-            string foo1 = new string(new[] { 'f', 'o', 'o' });
-            string foo2 = new string(new[] { 'f', 'o', 'o' });
+            string foo1 = new string(new[] {'f', 'o', 'o'});
+            string foo2 = new string(new[] {'f', 'o', 'o'});
 
             Assert.Throws<AssertionException>(() => foo1.ShouldNotBeEqual(foo2));
         }
@@ -95,7 +95,7 @@ namespace NUnit.Framework.Helpers.Tests.Extensions
         [Test]
         public void ShouldBeSame_IsSame_ShouldPass()
         {
-            string foo1 = new string(new[] { 'f', 'o', 'o' });
+            string foo1 = new string(new[] {'f', 'o', 'o'});
             string foo2 = foo1;
 
             foo1.ShouldBeSame(foo2);
@@ -104,8 +104,8 @@ namespace NUnit.Framework.Helpers.Tests.Extensions
         [Test]
         public void ShouldBeSame_IsNotSame_ShouldThrowAssertionException()
         {
-            string foo1 = new string(new[] { 'f', 'o', 'o' });
-            string foo2 = new string(new[] { 'f', 'o', 'o' });
+            string foo1 = new string(new[] {'f', 'o', 'o'});
+            string foo2 = new string(new[] {'f', 'o', 'o'});
 
             Assert.Throws<AssertionException>(() => foo1.ShouldBeSame(foo2));
         }
@@ -113,8 +113,8 @@ namespace NUnit.Framework.Helpers.Tests.Extensions
         [Test]
         public void ShouldNotBeSame_IsNotSame_ShouldPass()
         {
-            string foo1 = new string(new[] { 'f', 'o', 'o' });
-            string foo2 = new string(new[] { 'f', 'o', 'o' });
+            string foo1 = new string(new[] {'f', 'o', 'o'});
+            string foo2 = new string(new[] {'f', 'o', 'o'});
 
             foo1.ShouldNotBeSame(foo2);
         }
@@ -122,10 +122,34 @@ namespace NUnit.Framework.Helpers.Tests.Extensions
         [Test]
         public void ShouldNotBeSame_IsSame_ShouldThrowAssertionException()
         {
-            string foo1 = new string(new[] { 'f', 'o', 'o' });
+            string foo1 = new string(new[] {'f', 'o', 'o'});
             string foo2 = foo1;
 
             Assert.Throws<AssertionException>(() => foo1.ShouldNotBeSame(foo2));
+        }
+
+        [Test]
+        public void ShouldBeTrue_IsTrue_ShouldPass()
+        {
+            true.ShouldBeTrue();
+        }
+
+        [Test]
+        public void ShouldBeTrue_IsFalse_ShouldThrowAssertionException()
+        {
+            Assert.Throws<AssertionException>(() => false.ShouldBeTrue());
+        }
+
+        [Test]
+        public void ShouldBeFalse_IsFalse_ShouldPass()
+        {
+            false.ShouldBeFalse();
+        }
+
+        [Test]
+        public void ShouldBeFalse_IsTrue_ThrowAssertionException()
+        {
+            Assert.Throws<AssertionException>(() => true.ShouldBeFalse());
         }
     }
 }
