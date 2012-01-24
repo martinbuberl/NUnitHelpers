@@ -10,9 +10,9 @@ namespace NUnit.Framework.Helpers
     /// <see href="http://geekswithblogs.net/sdorman/archive/2009/01/17/unit-testing-and-expected-exceptions.aspx" />
     [DebuggerStepThrough]
     [DebuggerNonUserCode]
-    public static class AssertException
+    public static class Should
     {
-        public static void ShouldThrow<TException>(Action blockToExecute) where TException : Exception
+        public static void Throw<TException>(Action blockToExecute) where TException : Exception
         {
             try
             {
@@ -28,7 +28,7 @@ namespace NUnit.Framework.Helpers
             Assert.Fail("Expected exception of type " + typeof(TException) + " but no exception was thrown.");
         }
 
-        public static void ShouldThrow<TException>(string expectedMessage, Action blockToExecute) where TException : Exception
+        public static void Throw<TException>(string expectedMessage, Action blockToExecute) where TException : Exception
         {
             try
             {
