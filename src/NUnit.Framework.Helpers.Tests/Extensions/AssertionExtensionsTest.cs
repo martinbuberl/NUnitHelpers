@@ -182,6 +182,150 @@ namespace NUnit.Framework.Helpers.Tests.Extensions
 
             Assert.Throws<AssertionException>(beer.ShouldBeAssignableFrom<string>);
         }
+
+        [Test]
+        public void ShouldBeLess_IsLess_ShouldPass()
+        {
+            ((decimal)10).ShouldBeLess(20);
+            ((double)10).ShouldBeLess(20);
+            ((float)10).ShouldBeLess(20);
+            ((int)10).ShouldBeLess(20);
+            ((long)10).ShouldBeLess(20);
+            ((uint)10).ShouldBeLess(20);
+            ((ulong)10).ShouldBeLess(20);
+        }
+
+        [Test]
+        public void ShouldBeLess_IsEqual_ShouldThrowAssertionException()
+        {
+            Should.Throw<AssertionException>(() => ((decimal)10).ShouldBeLess(10));
+            Should.Throw<AssertionException>(() => ((double)10).ShouldBeLess(10));
+            Should.Throw<AssertionException>(() => ((float)10).ShouldBeLess(10));
+            Should.Throw<AssertionException>(() => ((int)10).ShouldBeLess(10));
+            Should.Throw<AssertionException>(() => ((long)10).ShouldBeLess(10));
+            Should.Throw<AssertionException>(() => ((uint)10).ShouldBeLess(10));
+            Should.Throw<AssertionException>(() => ((ulong)10).ShouldBeLess(10));
+        }
+
+        [Test]
+        public void ShouldBeLess_IsGreater_ShouldThrowAssertionException()
+        {
+            Should.Throw<AssertionException>(() => ((decimal)10).ShouldBeLess(5));
+            Should.Throw<AssertionException>(() => ((double)10).ShouldBeLess(5));
+            Should.Throw<AssertionException>(() => ((float)10).ShouldBeLess(5));
+            Should.Throw<AssertionException>(() => ((int)10).ShouldBeLess(5));
+            Should.Throw<AssertionException>(() => ((long)10).ShouldBeLess(5));
+            Should.Throw<AssertionException>(() => ((uint)10).ShouldBeLess(5));
+            Should.Throw<AssertionException>(() => ((ulong)10).ShouldBeLess(5));
+        }
+
+        [Test]
+        public void ShouldBeLessOrEqual_IsLess_ShouldPass()
+        {
+            ((decimal)10).ShouldBeLessOrEqual(20);
+            ((double)10).ShouldBeLessOrEqual(20);
+            ((float)10).ShouldBeLessOrEqual(20);
+            ((int)10).ShouldBeLessOrEqual(20);
+            ((long)10).ShouldBeLessOrEqual(20);
+            ((uint)10).ShouldBeLessOrEqual(20);
+            ((ulong)10).ShouldBeLessOrEqual(20);
+        }
+
+        [Test]
+        public void ShouldBeLessOrEqual_IsEqual_ShouldPass()
+        {
+            ((decimal)10).ShouldBeLessOrEqual(10);
+            ((double)10).ShouldBeLessOrEqual(10);
+            ((float)10).ShouldBeLessOrEqual(10);
+            ((int)10).ShouldBeLessOrEqual(10);
+            ((long)10).ShouldBeLessOrEqual(10);
+            ((uint)10).ShouldBeLessOrEqual(10);
+            ((ulong)10).ShouldBeLessOrEqual(10);
+        }
+
+        [Test]
+        public void ShouldBeLessOrEqual_IsGreater_ShouldThrowAssertionException()
+        {
+            Should.Throw<AssertionException>(() => ((decimal)10).ShouldBeLessOrEqual(5));
+            Should.Throw<AssertionException>(() => ((double)10).ShouldBeLessOrEqual(5));
+            Should.Throw<AssertionException>(() => ((float)10).ShouldBeLessOrEqual(5));
+            Should.Throw<AssertionException>(() => ((int)10).ShouldBeLessOrEqual(5));
+            Should.Throw<AssertionException>(() => ((long)10).ShouldBeLessOrEqual(5));
+            Should.Throw<AssertionException>(() => ((uint)10).ShouldBeLessOrEqual(5));
+            Should.Throw<AssertionException>(() => ((ulong)10).ShouldBeLessOrEqual(5));
+        }
+
+        [Test]
+        public void ShouldBeGreater_IsGreater_ShouldPass()
+        {
+            ((decimal)30).ShouldBeGreater(20);
+            ((double)30).ShouldBeGreater(20);
+            ((float)30).ShouldBeGreater(20);
+            ((int)30).ShouldBeGreater(20);
+            ((long)30).ShouldBeGreater(20);
+            ((uint)30).ShouldBeGreater(20);
+            ((ulong)30).ShouldBeGreater(20);
+        }
+
+        [Test]
+        public void ShouldBeGreater_IsEqual_ShouldThrowAssertionException()
+        {
+            Should.Throw<AssertionException>(() => ((decimal)10).ShouldBeGreater(10));
+            Should.Throw<AssertionException>(() => ((double)10).ShouldBeGreater(10));
+            Should.Throw<AssertionException>(() => ((float)10).ShouldBeGreater(10));
+            Should.Throw<AssertionException>(() => ((int)10).ShouldBeGreater(10));
+            Should.Throw<AssertionException>(() => ((long)10).ShouldBeGreater(10));
+            Should.Throw<AssertionException>(() => ((uint)10).ShouldBeGreater(10));
+            Should.Throw<AssertionException>(() => ((ulong)10).ShouldBeGreater(10));
+        }
+
+        [Test]
+        public void ShouldBeGreater_IsLess_ShouldThrowAssertionException()
+        {
+            Should.Throw<AssertionException>(() => ((decimal)10).ShouldBeGreater(20));
+            Should.Throw<AssertionException>(() => ((double)10).ShouldBeGreater(20));
+            Should.Throw<AssertionException>(() => ((float)10).ShouldBeGreater(20));
+            Should.Throw<AssertionException>(() => ((int)10).ShouldBeGreater(20));
+            Should.Throw<AssertionException>(() => ((long)10).ShouldBeGreater(20));
+            Should.Throw<AssertionException>(() => ((uint)10).ShouldBeGreater(20));
+            Should.Throw<AssertionException>(() => ((ulong)10).ShouldBeGreater(20));
+        }
+
+        [Test]
+        public void ShouldBeGreaterOrEqual_IsGreater_ShouldPass()
+        {
+            ((decimal)30).ShouldBeGreaterOrEqual(20);
+            ((double)30).ShouldBeGreaterOrEqual(20);
+            ((float)30).ShouldBeGreaterOrEqual(20);
+            ((int)30).ShouldBeGreaterOrEqual(20);
+            ((long)30).ShouldBeGreaterOrEqual(20);
+            ((uint)30).ShouldBeGreaterOrEqual(20);
+            ((ulong)30).ShouldBeGreaterOrEqual(20);
+        }
+
+        [Test]
+        public void ShouldBeGreaterOrEqual_IsEqual_ShouldPass()
+        {
+            ((decimal)30).ShouldBeGreaterOrEqual(30);
+            ((double)30).ShouldBeGreaterOrEqual(30);
+            ((float)30).ShouldBeGreaterOrEqual(30);
+            ((int)30).ShouldBeGreaterOrEqual(30);
+            ((long)30).ShouldBeGreaterOrEqual(30);
+            ((uint)30).ShouldBeGreaterOrEqual(30);
+            ((ulong)30).ShouldBeGreaterOrEqual(30);
+        }
+
+        [Test]
+        public void ShouldBeGreaterOrEqual_IsLess_ShouldThrowAssertionException()
+        {
+            Should.Throw<AssertionException>(() => ((decimal)10).ShouldBeGreaterOrEqual(20));
+            Should.Throw<AssertionException>(() => ((double)10).ShouldBeGreaterOrEqual(20));
+            Should.Throw<AssertionException>(() => ((float)10).ShouldBeGreaterOrEqual(20));
+            Should.Throw<AssertionException>(() => ((int)10).ShouldBeGreaterOrEqual(20));
+            Should.Throw<AssertionException>(() => ((long)10).ShouldBeGreaterOrEqual(20));
+            Should.Throw<AssertionException>(() => ((uint)10).ShouldBeGreaterOrEqual(20));
+            Should.Throw<AssertionException>(() => ((ulong)10).ShouldBeGreaterOrEqual(20));
+        }
     }
 
     #region Helpers
