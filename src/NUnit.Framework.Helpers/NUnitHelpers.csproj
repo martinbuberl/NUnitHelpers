@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{91DE249D-B57D-4861-A80A-04B585F681C1}</ProjectGuid>
+    <ProjectGuid>{5DCA697E-33A7-44E5-B4FC-8835A59B213B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NUnit.Framework.Helpers.Tests</RootNamespace>
-    <AssemblyName>NUnit.Framework.Helpers.Tests</AssemblyName>
+    <RootNamespace>NUnit.Framework.Helpers</RootNamespace>
+    <AssemblyName>NUnitHelpers</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -48,18 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AssertExceptionTest.cs" />
-    <Compile Include="Extensions\AssertionExtensionsTest.cs" />
+    <Compile Include="AssertException.cs" />
+    <Compile Include="Extensions\AssertionExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\NUnit.Framework.Helpers\NUnit.Framework.Helpers.csproj">
-      <Project>{5DCA697E-33A7-44E5-B4FC-8835A59B213B}</Project>
-      <Name>NUnit.Framework.Helpers</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
