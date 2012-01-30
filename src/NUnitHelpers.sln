@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnit.Framework.Helpers", "NUnit.Framework.Helpers\NUnit.Framework.Helpers.csproj", "{5DCA697E-33A7-44E5-B4FC-8835A59B213B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitHelpers", "NUnitHelpers\NUnitHelpers.csproj", "{5DCA697E-33A7-44E5-B4FC-8835A59B213B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnit.Framework.Helpers.Tests", "NUnit.Framework.Helpers.Tests\NUnit.Framework.Helpers.Tests.csproj", "{91DE249D-B57D-4861-A80A-04B585F681C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitHelpers.Tests", "NUnitHelpers.Tests\NUnitHelpers.Tests.csproj", "{91DE249D-B57D-4861-A80A-04B585F681C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

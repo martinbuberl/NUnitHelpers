@@ -56,7 +56,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NUnit.Framework.Helpers\NUnitHelpers.csproj">
+    <ProjectReference Include="..\NUnitHelpers\NUnitHelpers.csproj">
       <Project>{5DCA697E-33A7-44E5-B4FC-8835A59B213B}</Project>
       <Name>NUnitHelpers</Name>
     </ProjectReference>
