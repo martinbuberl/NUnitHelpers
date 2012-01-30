@@ -1,29 +1,15 @@
 ﻿using System;
 using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-#if DEBUG
-[assembly: AssemblyTitle("NUnit.Framework.Helpers (DEBUG)")]
-#else // RELEASE
-[assembly: AssemblyTitle("NUnit.Framework.Helpers")]
-#endif
-
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyCulture("")]
+[assembly: AssemblyTitle("NUnitHelpers")]
+[assembly: AssemblyDescription("NUnitHelpers is a library of useful NUnit helpers.")]
+[assembly: AssemblyCompany("Martin Buberl")]
 
 [assembly: ComVisible(false)]
 [assembly: CLSCompliant(true)]
 
 [assembly: Guid("92ebe020-7fd9-4bc5-92d2-42a8137b7c74")]
-
-[assembly: InternalsVisibleTo("NUnit.Framework.Helpers.Tests")]
-
-[assembly: AssemblyProduct("NUnit.Framework.Helpers")]
-
-[assembly: AssemblyCompany("Martin Buberl")]
-[assembly: AssemblyCopyright("Copyright (c) 2012, Martin Buberl")]
-[assembly: AssemblyTrademark("")]
 
 #if DEBUG
 [assembly: AssemblyConfiguration("Debug")]
