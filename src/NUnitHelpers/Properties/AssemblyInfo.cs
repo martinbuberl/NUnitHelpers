@@ -1,5 +1,4 @@
-﻿using System;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("NUnitHelpers")]
@@ -7,7 +6,6 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCompany("Martin Buberl")]
 
 [assembly: ComVisible(false)]
-[assembly: CLSCompliant(true)]
 
 [assembly: Guid("92ebe020-7fd9-4bc5-92d2-42a8137b7c74")]
 
