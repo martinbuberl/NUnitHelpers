@@ -1,8 +1,10 @@
 $itemsToDelete = Get-ChildItem . -recurse -force -include *.suo,*.user,*.cache,*.docstates,bin,obj,build,_ReSharper.*
 
-foreach ($item in $itemsToDelete) {
-    Remove-Item $item.FullName -Force -Recurse -ErrorAction SilentlyContinue
-    Write-Host "Deleted" $item.FullName
+if ($itemsToDelete) {
+    foreach ($item in $itemsToDelete) {
+        Remove-Item $item.FullName -Force -Recurse -ErrorAction SilentlyContinue
+        Write-Host "Deleted" $item.FullName
+    }
 }
 
 Write-Host "Press any key to continue . . ."
