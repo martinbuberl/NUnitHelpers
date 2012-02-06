@@ -1,5 +1,5 @@
 $currentPath = Split-Path $MyInvocation.MyCommand.Path
-$msbuildFile = Join-Path $currentPath NUnitHelpers.msbuild
+$msbuildFile = Join-Path $currentPath src\NUnitHelpers.msbuild
 
 & "$(get-content env:windir)\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe" $msbuildFile /t:Build
 
