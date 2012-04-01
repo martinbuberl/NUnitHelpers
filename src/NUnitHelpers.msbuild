@@ -35,20 +35,6 @@
     <CallTarget Targets="Clean;Compile"/>
   </Target>
 
-  <!-- NuGet -->
-
-  <Target Name="NuGet">
-    <GetAssemblyIdentity AssemblyFiles="$(BuildCompileDirectory)\$(AssemblyName).dll">
-      <Output TaskParameter="Assemblies" ItemName="AssemblyIdentities"/>
-    </GetAssemblyIdentity>
-
-    <NuGetPack
-      ToolPath="$(ToolsDirectory)"
-      WorkingDirectory="$(BuildCompileDirectory)"
-      File="$(SrcDirectory)\$(SolutionName).nuspec"
-      Version="%(AssemblyIdentities.Version)"/>
-  </Target>
-
   <!-- Clean -->
 
   <Target Name="Clean">
@@ -89,6 +75,20 @@
       ToolPath="$(LibDirectory)\NUnit.$(NUnitVersion)\tools"
       WorkingDirectory="$(BuildCompileDirectory)"
       OutputXmlFile="$(BuildDirectory)\$(SolutionName).Tests.xml" />
+  </Target>
+
+  <!-- NuGet -->
+
+  <Target Name="NuGet">
+    <GetAssemblyIdentity AssemblyFiles="$(BuildCompileDirectory)\$(AssemblyName).dll">
+      <Output TaskParameter="Assemblies" ItemName="AssemblyIdentities"/>
+    </GetAssemblyIdentity>
+
+    <NuGetPack
+      ToolPath="$(ToolsDirectory)"
+      WorkingDirectory="$(BuildCompileDirectory)"
+      File="$(SrcDirectory)\$(SolutionName).nuspec"
+      Version="%(AssemblyIdentities.Version)"/>
   </Target>
 
 </Project>
