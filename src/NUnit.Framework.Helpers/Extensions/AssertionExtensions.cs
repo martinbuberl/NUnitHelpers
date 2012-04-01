@@ -26,6 +26,16 @@ namespace NUnit.Framework.Helpers.Extensions
             Assert.IsNotNullOrEmpty(actual);
         }
 
+        public static void ShouldBeEmpty(this string actual)
+        {
+            Assert.IsEmpty(actual);
+        }
+
+        public static void ShouldNotBeEmpty(this string actual)
+        {
+            Assert.IsNotEmpty(actual);
+        }
+
         public static void ShouldBeEqual(this object actual, object expected)
         {
             Assert.AreEqual(expected, actual);

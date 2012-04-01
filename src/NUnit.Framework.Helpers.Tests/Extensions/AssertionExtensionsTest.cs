@@ -57,6 +57,32 @@ namespace NUnit.Framework.Helpers.Tests.Extensions
         }
 
         [Test]
+        public void ShouldBeEmpty_IsNotEmpty_ShouldThrowAssertionException()
+        {
+            Assert.Throws<AssertionException>(() => "foo".ShouldBeEmpty());
+        }
+
+        [Test]
+        public void ShouldBeEmpty_IsEmpty_ShouldPass()
+        {
+            String.Empty.ShouldBeEmpty();
+            "".ShouldBeEmpty();
+        }
+
+        [Test]
+        public void ShouldNotBeEmpty_IsNotEmpty_ShouldPass()
+        {
+            "foo".ShouldNotBeEmpty();
+        }
+
+        [Test]
+        public void ShouldNotBeEmpty_IsEmpty_ShouldThrowAssertionException()
+        {
+            Assert.Throws<AssertionException>(() => String.Empty.ShouldNotBeEmpty());
+            Assert.Throws<AssertionException>(() => "".ShouldNotBeEmpty());
+        }
+
+        [Test]
         public void ShouldBeEqual_IsEqual_ShouldPass()
         {
             string foo1 = new string(new[] {'f', 'o', 'o'});
