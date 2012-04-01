@@ -1,19 +1,15 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
 
+#if DEBUG
+[assembly: AssemblyTitle("NUnitHelpers.Tests (Debug)")]
+#else // RELEASE
 [assembly: AssemblyTitle("NUnitHelpers.Tests")]
+#endif
+
 [assembly: AssemblyDescription("")]
-[assembly: AssemblyCompany("Martin Buberl")]
+[assembly: AssemblyCulture("")]
 
 [assembly: ComVisible(false)]
 
 [assembly: Guid("229fb8cf-b025-49df-a849-d908ca996419")]
-
-#if DEBUG
-[assembly: AssemblyConfiguration("Debug")]
-#else // RELEASE
-[assembly: AssemblyConfiguration("Release")]
-#endif
-
-[assembly: AssemblyVersion("0.1.0.0")]
-[assembly: AssemblyFileVersion("0.1.0.0")]
