@@ -5,8 +5,8 @@ NUnitHelpers is a library of useful helpers to add [behavior-driven development]
 
     Install-Package NUnitHelpers
 
-## LICENSE
-[MIT License][mit]
+## License
+NUnitHelpers is released under the [MIT license][mit].
 
 [bdd]:   http://en.wikipedia.org/wiki/Behavior_Driven_Development
 [nunit]: http://nunit.org
