@@ -8,7 +8,7 @@
     <projectUrl>https://github.com/martinbuberl/NUnitHelpers</projectUrl>
     <licenseUrl>https://github.com/martinbuberl/NUnitHelpers/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>NUnitHelpers is a library of useful NUnit helpers.</description>
+    <description>NUnitHelpers is a library of useful helpers to add behavior-driven development to NUnit.</description>
     <releaseNotes />
     <language>en-US</language>
     <tags>NUnit TDD BDD</tags>

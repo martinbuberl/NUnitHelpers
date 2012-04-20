@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("NUnitHelpers")]
 #endif
 
-[assembly: AssemblyDescription("NUnitHelpers is a library of useful NUnit helpers.")]
+[assembly: AssemblyDescription("NUnitHelpers is a library of useful helpers to add behavior-driven development to NUnit.")]
 [assembly: AssemblyCulture("")]
 
 [assembly: ComVisible(false)]
