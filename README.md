@@ -3,7 +3,9 @@ NUnitHelpers is a library of useful helpers to add [behavior-driven development]
 
 ## Get it on NuGet
 
-[NuGet][nuget] is a Visual Studio extension that makes it easy to install and update third-party libraries and tools in Visual Studio.
+[NuGet][nuget] is a Visual Studio extension that makes it easy to install and update third-party libraries 
+and tools in Visual Studio.
+
 To install [NUnitHelpers][package], run the following command in the [Package Manager Console][pmc]:
 
     PM> Install-Package NUnitHelpers
