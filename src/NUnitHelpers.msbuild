@@ -14,7 +14,6 @@
     <LibDirectory>$(RootDirectory)\lib</LibDirectory>
     <BuildDirectory>$(RootDirectory)\build</BuildDirectory>
     <BuildCompileDirectory>$(BuildDirectory)\$(SolutionName)</BuildCompileDirectory>
-    <BuildPackageDirectory>$(BuildDirectory)\package</BuildPackageDirectory>
 
     <MSBuildCommunityTasksPath>.</MSBuildCommunityTasksPath>
   </PropertyGroup>
