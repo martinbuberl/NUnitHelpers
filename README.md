@@ -12,9 +12,11 @@ To install [NUnitHelpers][package], run the following command in the [Package Ma
 
 ## Usage
 
-###Should extension methods
+###Extension methods
 
-The usage is pretty straight forward. Instead of the classic `Assert.IsNull(actual)` just use the extension method on the actual object `actual.ShouldBeNull()`.
+The usage is pretty straight forward. Instead of the classic `Assert.IsNull(actual)` just use the extension method on the actual object `actual.ShouldBeNull()` to create a BDD-style test.
+
+The implemented extensions are:
 
     ShouldBeNull(this object actual)
     ShouldNotBeNull(this object actual)
