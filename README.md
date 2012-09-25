@@ -1,6 +1,8 @@
 # NUnitHelpers
 NUnitHelpers is a library of useful helpers to add [behavior-driven development][bdd] to [NUnit][nunit].
 
+**This project is not maintained anymore. I'd strongly advise using NUnit's fluent syntax.**
+
 ## Get it on NuGet
 
 [NuGet][nuget] is a Visual Studio extension that makes it easy to install and update third-party libraries 
@@ -39,7 +41,7 @@ The implemented extensions are:
 
 ## Give back
 
-If you found this project useful you can [buy me a beer][donate].
+If you found this project useful you can follow me on Twitter ([@martinbuberl][twitter]) or [buy me a beer][donate].
 
 ## License
 NUnitHelpers is released under the [MIT license][mit].
