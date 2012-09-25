@@ -51,5 +51,6 @@ NUnitHelpers is released under the [MIT license][mit].
 [nuget]:   http://nuget.org
 [package]: http://nuget.org/packages/NUnitHelpers
 [pmc]:     http://docs.nuget.org/docs/start-here/using-the-package-manager-console
+[twitter]:  https://twitter.com/martinbuberl
 [donate]:  https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2AGHGEL2X4VSQ
 [mit]:     https://github.com/martinbuberl/NUnitHelpers/blob/master/LICENSE
